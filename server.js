@@ -28,7 +28,7 @@ renderer = createRenderer(bundle, {
   clientManifest
 })
  
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'development') {
   app.use('/js/main*', proxy({
     target: `${devServerBaseURL}:${devServerPort}`, 
     changeOrigin: true,
